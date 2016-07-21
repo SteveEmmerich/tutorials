@@ -1,0 +1,18 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Ionic 2 Todo App
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  
+  <ion-list *ngIf="todos">
+    <p>{{todos[0]?.title}}</p>
+    <ion-item *ngFor="let todo of todos">
+      <ion-label>{{todo.title}}</ion-label>
+      <ion-checkbox [(ngModel)]="todo.complete"> {{todo.title}} </ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <p *ngIf="!todos"> No todos </p>
+  <button fab fab-bottom fab-right (click)="newTodo()"> New </button>
+</ion-content>

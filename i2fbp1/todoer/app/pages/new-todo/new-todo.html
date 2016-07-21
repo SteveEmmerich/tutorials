@@ -1,0 +1,23 @@
+<!--
+  Generated template for the NewTodoPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar>
+  <ion-title>new-todo</ion-title>
+</ion-navbar>
+
+<ion-content padding class="new-todo">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Title:</ion-label>
+      <ion-input  [(ngModel)]="todo.title" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Complete</ion-label>
+      <ion-checkbox   [(ngModel)]="todo.complete"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <button clear (click)="save()">Save</button>
+</ion-content>
